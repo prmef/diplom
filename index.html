@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Запчасти №1 - Автозапчасти по выгодным ценам!</title>
+    <title>Все запчасти - Автозапчасти по выгодным ценам!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
     <div class="container">
 
-        <h1>Запчасти №1</h1>
+        <h1>Все запчасти</h1>
         <p>Ваш надежный партнер в мире автозапчастей!</p>
     </div>
 </header>
@@ -20,7 +20,7 @@
         <div class="container">
             <div class="hero__content">
                 <h2>Забудьте о проблемах с поиском автозапчастей!</h2>
-                <p>В Запчасти №1 вы найдете все, что нужно для вашего автомобиля по самым выгодным ценам.</p>
+                <p>В Все запчасти вы найдете все, что нужно для вашего автомобиля по самым выгодным ценам.</p>
                 <a href="#catalog" class="btn btn--large">Перейти в каталог</a>
             </div>
 
@@ -65,21 +65,21 @@
                 <div class="reviews__slide">
                     <div class="review__card">
                         <img src="review_1.jpg" width="100px" height="100px" alt="Отзыв клиента 1">
-                        <p class="review__text">"Запчасти №1 - это просто находка! Нашел все, что нужно для своего авто по отличным ценам. Доставка быстрая, а сервис на высшем уровне. Спасибо!"</p>
+                        <p class="review__text">"ЗВсе запчасти - это просто находка! Нашел все, что нужно для своего авто по отличным ценам. Доставка быстрая, а сервис на высшем уровне. Спасибо!"</p>
                         <span class="review__author">Игорь Петров</span>
                     </div>
                 </div>
                 <div class="reviews__slide">
                     <div class="review__card">
                         <img src="review_2.jpg" width="100px" height="100px" alt="Отзыв клиента 2">
-                        <p class="review__text">"Уже несколько раз заказывал запчасти в Запчасти №1 и всегда оставался доволен. Огромный выбор, оригинальные запчасти, удобный поиск на сайте. Рекомендую всем!"</p>
+                        <p class="review__text">"Уже несколько раз заказывал запчасти в Все запчасти и всегда оставался доволен. Огромный выбор, оригинальные запчасти, удобный поиск на сайте. Рекомендую всем!"</p>
                         <span class="review__author">Мария Иванова</span>
                     </div>
                 </div>
                 <div class="reviews__slide">
                     <div class="review__card">
                         <img src="review_3.webp" width="100px" height="100px" alt="Отзыв клиента 3">
-                        <p class="review__text">"Спасибо Запчасти №1 за помощь в ремонте моего авто! Специалисты магазина быстро и точно подобрали все необходимые запчасти. Теперь мой автомобиль снова на ходу!"</p>
+                        <p class="review__text">"Спасибо Все запчасти за помощь в ремонте моего авто! Специалисты магазина быстро и точно подобрали все необходимые запчасти. Теперь мой автомобиль снова на ходу!"</p>
                         <span class="review__author">Сергей Кузнецов</span>
                     </div>
                 </div>
@@ -93,29 +93,59 @@
         <div class="container">
             <h2>Каталог запчастей</h2>
             <div class="catalog__slider">
+                <<!-- Add an ID to each "Купить" button to identify them -->
                 <div class="catalog__slide">
-                    <img src="part1.jpg" alt="Запчасть 1">
-                    <h3>Название запчасти 1</h3>
+                    <img src="./0npggro3rpyg7mbnqz90hqjxc5vbp510.jpg" alt="Запчасть 1">
+                    <h3>Фильтр воздушный</h3>
                     <p>Описание запчасти 1</p>
-                    <button>Купить</button>
+                    <button class="buy-button">Купить</button> <!-- Add class "buy-button" -->
                 </div>
                 <div class="catalog__slide">
-                    <img src="part2.jpg" alt="Запчасть 2">
-                    <h3>Название запчасти 2</h3>
+                    <img src="./62474040.jpg" alt="Запчасть 2">
+                    <h3>Фильтр масляный</h3>
                     <p>Описание запчасти 2</p>
-                    <button>Купить</button>
+                    <button class="buy-button">Купить</button> <!-- Add class "buy-button" -->
                 </div>
+                <div class="catalog__slide">
+                    <img src="./DOC017988332.jpg" alt="Запчасть 3">
+                    <h3>Шариковый подшипник</h3>
+                    <p>Описание запчасти 3</p>
+                    <button class="buy-button">Купить</button> <!-- Add class "buy-button" -->
+                </div>
+
+
                 <!-- Добавьте сколько угодно слайдов -->
             </div>
         </div>
     </section>
-
-
-    <section class="footer">
-        <div class="container">
-            <p>© 2024 Запчасти №1. Все права защищены.</p>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Заказать запчасть</h2>
+            <form action="mail.php" id="orderForm">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <input type="hidden" id="productNameInput" name="product_name">
+                <button type="submit">Отправить заказ</button>
+            </form>
         </div>
-    </section>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Компания</a></li>
+                <li>Телефон: +7 (XXX) XXX-XX-XX</li>
+                <li>Email: info@example.com</li>
+            </ul>
+        </div>
+    </footer>
+
 </main>
+<script src="script.js"></script>
 </body>
 </html>
